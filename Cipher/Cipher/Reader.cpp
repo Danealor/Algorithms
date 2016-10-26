@@ -12,7 +12,7 @@ Reader::~Reader()
 }
 
 // Returns length of file
-int Reader::GetLength()
+int Reader::getLength()
 {
 	file.seekg(0, file.end);
 	int length = file.tellg();
@@ -22,10 +22,10 @@ int Reader::GetLength()
 }
 
 // Returns ciphertext data from file as a vector of pointers to the first character of each word in the text.
-std::vector<char*> Reader::GetData()
+std::vector<char*> Reader::getData()
 {
 	std::vector<char*> data;
-	int length = GetLength();
+	int length = getLength();
 
 	// Careful of the new keyword!
 	ciphertext = new char[length];
@@ -47,7 +47,7 @@ std::vector<char*> Reader::GetData()
 	return data;
 }
 
-char* Reader::GetText()
+char* Reader::getText()
 {
 	return ciphertext;
 }

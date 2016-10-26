@@ -12,8 +12,8 @@ public:
 	Reader(const std::string& filePath);
 	~Reader();
 
-	int GetLength();
+	int getLength();
 
-	std::vector<char*> GetData();
-	char* GetText();
+	std::vector<char*> getData();
+	char* getText();
 };
